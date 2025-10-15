@@ -33,19 +33,18 @@ const Card = ({ title, subtitle, author, imageSource, body, text, textToday }) =
         style={styles.icon}
       />
       <FontAwesome6
-    name="play"
-    size={25}
-    color="#ffffff"
-    style={{ position: 'relative', top: -210, right: -310 }}
-  />
-  <FontAwesome6
-  name="ellipsis-vertical"
-  size={24}
-  color="#ffffff"
-  style={{ position: 'absolute', top: 10, right: 10 }}
-/>
+        name="play"
+        size={25}
+        color="#ffffff"
+        style={{ position: 'relative', top: -185, right: -300 }}
+      />
+      <FontAwesome6
+        name="ellipsis-vertical"
+        size={24}
+        color="#ffffff"
+        style={{ position: 'absolute', top: 10, right: 10 }}
+      />
     </View>
-    
   );
 };
 
@@ -57,58 +56,58 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 10,
     marginVertical: 20,
-    width: '100%',
-    height: 185,
+    width: '95%',
+    height: 150,
     overflow: 'visible',
     position: 'relative',
-    top: -40
+    top: -40,
   },
   imageContainer: {},
   image: {
-    width: 180,
-    height: '109%',
+    width: 145,
+    height: 150,
     borderRadius: 10,
     marginLeft: -10,
     marginTop: -10,
   },
   textContainer: {},
   text: {
-    fontSize: 15,
+    fontSize: 13,
     color: '#bbbbbb',
     position: 'relative',
-    left: 185,
-    top: -175,
+    left: 145,
+    top: -135,
   },
   textToday: {
-    fontSize: 15,
+    fontSize: 13,
     color: '#ffffff',
     position: 'relative',
-    left: 183,
-    top: -170,
+    left: 143,
+    top: -130,
     fontWeight: '900',
   },
   infoContainer: {},
   title: {
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
     position: 'relative',
     left: -10,
-    top: -260,
+    top: -220,
   },
   subtitle: {
-    fontSize: 15,
+    fontSize: 13,
     position: 'relative',
-    left: 184,
-    top: -195,
+    left: 145,
+    top: -145,
     color: '#bbbbbb',
   },
   author: {
-    fontSize: 15,
+    fontSize: 13,
     marginTop: 15,
     position: 'relative',
-    left: 185,
-    top: -200,
+    left: 145,
+    top: -150,
     color: '#bbbbbb',
   },
   bodyContainer: {},
@@ -119,7 +118,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     position: 'absolute',
-    top: 140,    
-    right: 135,  
+    top: 120,
+    right: 155,
   },
 });

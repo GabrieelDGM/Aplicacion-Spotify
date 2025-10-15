@@ -24,7 +24,14 @@ export default function App() {
       id: 2,
       title: "LA BRUJA, LA NIÑA Y E...",
       author: "Lola Indigo",
+      subtitle: "Jump back in",
       imageUno: require('./assets/image5.png'),
+    },
+     {
+      id: 3,
+      textDos: "Shakira,Danny Ocean,",
+      textTres :"Sebastian Yatra, TINI, Bo...",
+      imageDos: require('./assets/image4.png'),
     },
   ];
 
@@ -39,17 +46,27 @@ export default function App() {
           title={item.title}
           subtitle={item.subtitle}
           author={item.author}
-          imageSource={item.imageSource} body={undefined}        />
+          imageSource={item.imageSource}
+          body={undefined}
+        />
       ))}
 
       
-      {objetosSecundarios.map((item) => (
-        <CardSeconds
-          key={item.id}
-          title={item.title}
-          author={item.author}
-          imageUno={item.imageUno} imageDos={undefined} imageTres={undefined}  />
-      ))}
+      <View style={styles.rowContainer}>
+        {objetosSecundarios.map((item) => (
+          <CardSeconds
+            key={item.id}
+            title={item.title}
+            author={item.author}
+            imageUno={item.imageUno}
+            imageDos={item.imageDos}
+            imageTres={undefined}
+            subtitle={item.subtitle}
+            textDos={item.textDos}
+            textTres={item.textTres}
+          />
+        ))}
+      </View>
 
       <StatusBar style="auto" />
     </View>
@@ -62,6 +79,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#121212',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 1,
+    padding: -20,
+    
+  },
+  rowContainer: {
+    flexDirection: 'row', 
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '95%',
+    marginTop: 20,
   },
 });

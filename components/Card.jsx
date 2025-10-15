@@ -32,7 +32,20 @@ const Card = ({ title, subtitle, author, imageSource, body, text, textToday }) =
         color="#9a9a9a"
         style={styles.icon}
       />
+      <FontAwesome6
+    name="play"
+    size={25}
+    color="#ffffff"
+    style={{ position: 'relative', top: -210, right: -310 }}
+  />
+  <FontAwesome6
+  name="ellipsis-vertical"
+  size={24}
+  color="#ffffff"
+  style={{ position: 'absolute', top: 10, right: 10 }}
+/>
     </View>
+    
   );
 };
 
@@ -45,7 +58,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginVertical: 20,
     width: '100%',
-    height: 200,
+    height: 190,
     overflow: 'visible',
     position: 'relative',
   },

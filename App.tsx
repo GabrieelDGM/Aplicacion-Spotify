@@ -31,8 +31,7 @@ export default function App() {
           title={item.title}
           subtitle={item.subtitle}
           author={item.author}
-          imageSource={item.imageSource}
-          body={item.body}
+          imageSource={item.imageSource} body={undefined}          
         />
       ))}
 
@@ -51,3 +50,4 @@ const styles = StyleSheet.create({
     
   },
 });
+

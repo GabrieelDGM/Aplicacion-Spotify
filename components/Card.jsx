@@ -1,16 +1,37 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 const Card = ({ title, subtitle, author, imageSource, body, text, textToday }) => {
   return (
     <View style={styles.card}>
-      {imageSource && <Image source={imageSource} style={styles.image} />}
-      <Text style={styles.text}>{text}</Text>
-      <Text style={styles.textToday}>{textToday}</Text>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.subtitle}>{subtitle}</Text>
-      <Text style={styles.author}>{author}</Text>
-      <Text style={styles.body}>{body}</Text>
+      {imageSource && (
+        <View style={styles.imageContainer}>
+          <Image source={imageSource} style={styles.image} />
+        </View>
+      )}
+
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{text}</Text>
+        <Text style={styles.textToday}>{textToday}</Text>
+      </View>
+
+      <View style={styles.infoContainer}>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subtitle}>{subtitle}</Text>
+        <Text style={styles.author}>{author}</Text>
+      </View>
+
+      <View style={styles.bodyContainer}>
+        <Text style={styles.body}>{body}</Text>
+      </View>
+
+      <FontAwesome6
+        name="add"
+        size={25}
+        color="#9a9a9a"
+        style={styles.icon}
+      />
     </View>
   );
 };
@@ -22,52 +43,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#1f1f1f',
     borderRadius: 20,
     padding: 10,
-    marginVertical:20,
-    display:'flex',
-    height: 275,
-    width: '95%',
-    height: '30%',
-  
+    marginVertical: 20,
+    width: '100%',
+    height: 200,
+    overflow: 'visible',
+    position: 'relative',
   },
+  imageContainer: {},
   image: {
     width: 185,
-    height: 200,
+    height: '109%',
     borderRadius: 10,
-    marginLeft: -10
+    marginLeft: -10,
+    marginTop: -10,
   },
-  title: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: '#ffffff',
-    position: 'relative',
-    left:-10,
-    top: -290,
-  },
-  subtitle: {
-    position: 'relative',
-    left: 200,
-    top: -180,
-    color: '#bbbbbb',
-  },
-  author: {
-    fontSize: 17,
-    marginTop: 15,
-    position: 'relative',
-    left: 210,
-    top: -180,
-    color: '#bbbbbb',
-  },
-  body: {
-    marginTop: 20,
-    textAlign: 'center',
-    color: '#ffffff',
-  },
+  textContainer: {},
   text: {
     fontSize: 15,
     color: '#bbbbbb',
     position: 'relative',
     left: 185,
-    top: -185,
+    top: -180,
   },
   textToday: {
     fontSize: 15,
@@ -75,6 +71,41 @@ const styles = StyleSheet.create({
     position: 'relative',
     left: 183,
     top: -180,
-    fontWeight: 900
+    fontWeight: '900',
+  },
+  infoContainer: {},
+  title: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#ffffff',
+    position: 'relative',
+    left: -10,
+    top: -275,
+  },
+  subtitle: {
+    fontSize: 15,
+    position: 'relative',
+    left: 185,
+    top: -205,
+    color: '#bbbbbb',
+  },
+  author: {
+    fontSize: 15,
+    marginTop: 15,
+    position: 'relative',
+    left: 185,
+    top: -215,
+    color: '#bbbbbb',
+  },
+  bodyContainer: {},
+  body: {
+    marginTop: 20,
+    textAlign: 'center',
+    color: '#ffffff',
+  },
+  icon: {
+    position: 'absolute',
+    top: 150,    
+    right: 135,  
   },
 });

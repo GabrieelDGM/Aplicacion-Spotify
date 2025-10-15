@@ -45,9 +45,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start', 
-    paddingHorizontal: 8, 
+    paddingHorizontal: 30, 
     backgroundColor: '#2b292933',
-    borderRadius: 15
+    borderRadius: 15,
+    marginTop: -350,
+    marginLeft: -70,
+    marginVertical: 20,
+    width: '120%'
+
+
+    
     
   },
   left: {
@@ -62,9 +69,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF6B38',
     alignItems: 'center',
     justifyContent: 'center',
+    marginLeft: 70,
+
   },
   avatarText: {
-    color: '#fff',
+    color: '#000000ff',
     fontWeight: '700',
   },
   segmented: {
@@ -82,11 +91,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#1db954',
   },
   segmentText: {
-    color: '#bdbdbd',
+    color: '#f6f6f6',
     fontWeight: '600',
   },
   segmentTextActive: {
-    color: '#000000ff',
+    color: '#040404ff',
   },
 });
 export default Header;

@@ -9,15 +9,15 @@ export default function App() {
   const objetos = [
     {
       id: 1,
+      title: "Picked for you",
       text: 'Playlist',
-      title : 'Today s Top Hits',
+      textToday : 'Today s Top Hits',
       subtitle: 'The hottest 50. Cover',
       author: 'Taylor Swift',
       imageSource: require('./assets/image1.png'), 
       
     },
     
-  
   ];
 
   return (
@@ -43,9 +43,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000ff',
+    backgroundColor: '#121212',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
+    padding: 1,
+    
   },
 });

@@ -12,8 +12,8 @@ export default function App() {
       title: "Picked for you",
       text: "Playlist",
       textToday: "Today's Top Hits",
-      subtitle: "The hottest 50. Cover",
-      author: "Taylor Swift",
+      subtitle: "Chihiro",
+      author: "Billie Eilish",
       imageSource: require('./assets/image1.png'),
     },
   ];
@@ -33,6 +33,12 @@ export default function App() {
       textTres :"Sebastian Yatra, TINI, Bo...",
       imageDos: require('./assets/image4.png'),
     },
+    {
+      id: 4,
+      textFour : "Mora",
+      imageTres : require('./assets/image2.png'),
+    },
+  
   ];
 
   return (
@@ -48,6 +54,8 @@ export default function App() {
           author={item.author}
           imageSource={item.imageSource}
           body={undefined}
+        
+
         />
       ))}
 
@@ -60,10 +68,11 @@ export default function App() {
             author={item.author}
             imageUno={item.imageUno}
             imageDos={item.imageDos}
-            imageTres={undefined}
+            imageTres={item.imageTres}
             subtitle={item.subtitle}
             textDos={item.textDos}
             textTres={item.textTres}
+            textFour={item.textFour}   
           />
         ))}
       </View>
@@ -86,7 +95,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '95%',
+    width: '97%',
     marginTop: 20,
   },
 });

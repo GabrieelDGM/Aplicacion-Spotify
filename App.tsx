@@ -1,28 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Card from './components/Card';
 import Header from './components/Header';
-import { Icon } from '@rneui/themed';
+import CardSeconds from './components/CardSeconds';
 
 export default function App() {
-  
+ 
   const objetos = [
     {
       id: 1,
       title: "Picked for you",
-      text: 'Playlist',
-      textToday : 'Today s Top Hits',
-      subtitle: 'The hottest 50. Cover',
-      author: 'Taylor Swift',
-      imageSource: require('./assets/image1.png'), 
-      
+      text: "Playlist",
+      textToday: "Today's Top Hits",
+      subtitle: "The hottest 50. Cover",
+      author: "Taylor Swift",
+      imageSource: require('./assets/image1.png'),
     },
-    
+  ];
+
+ 
+  const objetosSecundarios = [
+    {
+      id: 2,
+      title: "LA BRUJA, LA NIÑA Y E...",
+      author: "Lola Indigo",
+      imageUno: require('./assets/image5.png'),
+    },
   ];
 
   return (
     <View style={styles.container}>
-    <Header />
+      <Header />
       {objetos.map((item) => (
         <Card
           key={item.id}
@@ -31,8 +39,16 @@ export default function App() {
           title={item.title}
           subtitle={item.subtitle}
           author={item.author}
-          imageSource={item.imageSource} body={undefined}          
-        />
+          imageSource={item.imageSource} body={undefined}        />
+      ))}
+
+      
+      {objetosSecundarios.map((item) => (
+        <CardSeconds
+          key={item.id}
+          title={item.title}
+          author={item.author}
+          imageUno={item.imageUno} imageDos={undefined} imageTres={undefined}  />
       ))}
 
       <StatusBar style="auto" />
@@ -47,7 +63,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 1,
-    
   },
 });
-

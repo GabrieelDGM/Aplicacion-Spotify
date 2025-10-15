@@ -7,7 +7,6 @@ function Header() {
 
   return (
     <View style={styles.header}>
-     
       <View style={styles.left}>
         <View style={styles.avatar}>
           <Text style={styles.avatarText}>V</Text>
@@ -44,19 +43,20 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start', 
-    paddingHorizontal: 30, 
+    justifyContent: 'flex-start',
+    paddingHorizontal: 30,
     borderRadius: 15,
-    marginTop: -350,
+    marginTop: -180,
     marginLeft: -70,
     marginVertical: 20,
-    height: 100,
-    width: '120%'
+    height: 150,
+    width: '130%',
+    
   },
   left: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginRight: 20, 
+    marginRight: 10,
   },
   avatar: {
     width: 40,
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginLeft: 70,
-
   },
   avatarText: {
     color: '#000000ff',
@@ -74,14 +73,14 @@ const styles = StyleSheet.create({
   },
   segmented: {
     flexDirection: 'row',
-    gap: 10,
-    marginLeft: 'auto', 
+    gap: 15,
+    marginLeft: 10,
   },
   segment: {
-    paddingVertical: 8,
+    paddingVertical: 9,
     paddingHorizontal: 14,
     borderRadius: 20,
-    backgroundColor: 'transparent',
+    backgroundColor: '#333333',
   },
   segmentActive: {
     backgroundColor: '#1db954',
@@ -94,4 +93,5 @@ const styles = StyleSheet.create({
     color: '#040404ff',
   },
 });
+
 export default Header;

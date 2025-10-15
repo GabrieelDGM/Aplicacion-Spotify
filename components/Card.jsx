@@ -20,16 +20,17 @@ export default Card;
 const styles = StyleSheet.create({
   card: {
     backgroundColor: '#1f1f1f',
-    borderRadius: 30,
+    borderRadius: 20,
     padding: 10,
     marginVertical:20,
-    display: 'flex',
+    display:'flex',
     height: 275,
-    width: '95%'
-    height: '10%'
+    width: '95%',
+    height: '30%',
+  
   },
   image: {
-    width: 200,
+    width: 185,
     height: 200,
     borderRadius: 10,
     marginLeft: -10
@@ -39,39 +40,41 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
     position: 'relative',
-    left: -75,
+    left:-10,
     top: -290,
   },
   subtitle: {
     position: 'relative',
     left: 200,
     top: -180,
-    color: '#939393',
+    color: '#bbbbbb',
   },
   author: {
-    marginTop: 10,
+    fontSize: 17,
+    marginTop: 15,
     position: 'relative',
     left: 210,
     top: -180,
-    color: '#939393',
+    color: '#bbbbbb',
   },
   body: {
-    marginTop: 10,
+    marginTop: 20,
     textAlign: 'center',
     color: '#ffffff',
   },
   text: {
-    fontSize: 16,
-    color: '#939393',
+    fontSize: 15,
+    color: '#bbbbbb',
     position: 'relative',
-    left: 210,
-    top: -180,
+    left: 185,
+    top: -185,
   },
   textToday: {
-    fontSize: 20,
+    fontSize: 15,
     color: '#ffffff',
     position: 'relative',
-    left: 210,
+    left: 183,
     top: -180,
+    fontWeight: 900
   },
 });

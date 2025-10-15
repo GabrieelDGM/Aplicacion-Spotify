@@ -26,6 +26,7 @@ export default function App() {
       {objetos.map((item) => (
         <Card
           key={item.id}
+          textToday={item.textToday}
           text={item.text}
           title={item.title}
           subtitle={item.subtitle}

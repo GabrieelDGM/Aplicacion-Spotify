@@ -46,16 +46,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start', 
     paddingHorizontal: 30, 
-    backgroundColor: '#2b292933',
     borderRadius: 15,
     marginTop: -350,
     marginLeft: -70,
     marginVertical: 20,
+    height: 100,
     width: '120%'
-
-
-    
-    
   },
   left: {
     flexDirection: 'row',

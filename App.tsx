@@ -4,9 +4,9 @@ import Card from './components/Card';
 import Header from './components/Header';
 import CardSeconds from './components/CardSeconds';
 import CardTree from './components/CardTree';
+import Navegation from './components/Navegation';
 
 export default function App() {
-
   const objetos = [
     {
       id: 1,
@@ -50,69 +50,67 @@ export default function App() {
       textFour: "DeBÍ TiRAR MáS FOtos",
       textDos: "Bad Bunny",
       imageDos: require('./assets/image3.png'),
-      textTree: "Show all"
+      textTree: "Show all",
     },
-
-
-
   ];
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={{ flex: 1, backgroundColor: '#121212' }}>
+      <ScrollView style={styles.container}>
+        <Header />
 
-      <Header />
-
-
-      {objetos.map((item) => (
-        <Card
-          key={item.id}
-          textToday={item.textToday}
-          text={item.text}
-          title={item.title}
-          subtitle={item.subtitle}
-          author={item.author}
-          imageSource={item.imageSource}
-          body={undefined}
-        />
-      ))}
-
-
-      <View style={styles.rowContainer}>
-        {objetosSecundarios.map((item) => (
-          <CardSeconds
+        {objetos.map((item) => (
+          <Card
             key={item.id}
-            title={item.title}
-            author={item.author}
-            imageUno={item.imageUno}
-            imageDos={item.imageDos}
-            imageTres={item.imageTres}
-            subtitle={item.subtitle}
-            textDos={item.textDos}
-            textTres={item.textTres}
-            textFour={item.textFour}
-          />
-        ))}
-      </View>
-
-
-      <View style={styles.treeCard}>
-        {objetosTercero.map((item) => (
-          <CardTree
-            key={item.id}
-            title={item.title}
+            textToday={item.textToday}
             text={item.text}
-            textUno={item.textUno}
-            image={item.image}
-            textFour={item.textFour}
-            textDos={item.textDos}
-            imageDos={item.imageDos}
-            textTree={item.textTree}
+            title={item.title}
+            subtitle={item.subtitle}
+            author={item.author}
+            imageSource={item.imageSource}
+            body={undefined}
           />
         ))}
-      </View>
 
-      <StatusBar style="auto" />
-    </ScrollView>
+
+        <View style={styles.rowContainer}>
+          {objetosSecundarios.map((item) => (
+            <CardSeconds
+              key={item.id}
+              title={item.title}
+              author={item.author}
+              imageUno={item.imageUno}
+              imageDos={item.imageDos}
+              imageTres={item.imageTres}
+              subtitle={item.subtitle}
+              textDos={item.textDos}
+              textTres={item.textTres}
+              textFour={item.textFour}
+            />
+          ))}
+        </View>
+
+        <View style={styles.treeCard}>
+          {objetosTercero.map((item) => (
+            <CardTree
+              key={item.id}
+              title={item.title}
+              text={item.text}
+              textUno={item.textUno}
+              image={item.image}
+              textFour={item.textFour}
+              textDos={item.textDos}
+              imageDos={item.imageDos}
+              textTree={item.textTree}
+            />
+          ))}
+        </View>
+
+        <StatusBar style="auto" />
+      </ScrollView>
+
+      <Navegation />
+    </View>
   );
 }
 

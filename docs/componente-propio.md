@@ -35,3 +35,6 @@ const styles = StyleSheet.create({
   title: { color: '#fff', fontWeight: 'bold' },
   subtitle: { color: '#b3b3b3' },
 });
+
+![Codigo mejor vision](./imagenes/Captura%20de%20pantalla%202025-10-16%20205611.png)
+  

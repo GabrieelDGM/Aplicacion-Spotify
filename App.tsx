@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import Card from './components/Card';
 import Header from './components/Header';
 import CardSeconds from './components/CardSeconds';
+import CardTree from './components/CardTree';
 
 export default function App() {
- 
+
   const objetos = [
     {
       id: 1,
@@ -18,7 +19,6 @@ export default function App() {
     },
   ];
 
- 
   const objetosSecundarios = [
     {
       id: 2,
@@ -27,23 +27,42 @@ export default function App() {
       subtitle: "Jump back in",
       imageUno: require('./assets/image5.png'),
     },
-     {
+    {
       id: 3,
-      textDos: "Shakira,Danny Ocean,",
-      textTres :"Sebastian Yatra, TINI, Bo...",
+      textDos: "Shakira, Danny Ocean,",
+      textTres: "Sebastian Yatra, TINI, Bo...",
       imageDos: require('./assets/image4.png'),
     },
     {
       id: 4,
-      textFour : "Mora",
-      imageTres : require('./assets/image2.png'),
+      textFour: "Mora",
+      imageTres: require('./assets/image2.png'),
     },
-  
+  ];
+
+  const objetosTercero = [
+    {
+      id: 5,
+      title: "Álbumes",
+      text: "Apan y Can",
+      textUno: "Canserbero, Apache",
+      image: require('./assets/image6.png'),
+      textFour: "DeBÍ TiRAR MáS FOtos",
+      textDos: "Bad Bunny",
+      imageDos: require('./assets/image3.png'),
+      textTree: "Show all"
+    },
+
+
+
   ];
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+
       <Header />
+
+
       {objetos.map((item) => (
         <Card
           key={item.id}
@@ -54,12 +73,10 @@ export default function App() {
           author={item.author}
           imageSource={item.imageSource}
           body={undefined}
-        
-
         />
       ))}
 
-      
+
       <View style={styles.rowContainer}>
         {objetosSecundarios.map((item) => (
           <CardSeconds
@@ -72,13 +89,30 @@ export default function App() {
             subtitle={item.subtitle}
             textDos={item.textDos}
             textTres={item.textTres}
-            textFour={item.textFour}   
+            textFour={item.textFour}
+          />
+        ))}
+      </View>
+
+
+      <View style={styles.treeCard}>
+        {objetosTercero.map((item) => (
+          <CardTree
+            key={item.id}
+            title={item.title}
+            text={item.text}
+            textUno={item.textUno}
+            image={item.image}
+            textFour={item.textFour}
+            textDos={item.textDos}
+            imageDos={item.imageDos}
+            textTree={item.textTree}
           />
         ))}
       </View>
 
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 
@@ -86,16 +120,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#121212',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: -20,
-    
+    padding: 10,
   },
   rowContainer: {
-    flexDirection: 'row', 
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '97%',
     marginTop: 20,
+  },
+  treeCard: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    borderRadius: 12,
+    flexWrap: 'wrap',
+    marginTop: 10,
   },
 });

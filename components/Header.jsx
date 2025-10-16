@@ -41,47 +41,42 @@ function Header() {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingHorizontal: 30,
-    borderRadius: 15,
-    marginTop: -180,
-    marginLeft: -70,
-    marginVertical: 20,
-    height: 150,
-    width: '130%',
-    
-  },
-  left: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginRight: 10,
-  },
-  avatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#FF6B38',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: 70,
-  },
-  avatarText: {
-    color: '#000000ff',
-    fontWeight: '700',
-  },
-  segmented: {
-    flexDirection: 'row',
-    gap: 15,
-    marginLeft: 10,
-  },
-  segment: {
-    paddingVertical: 9,
-    paddingHorizontal: 14,
-    borderRadius: 20,
-    backgroundColor: '#333333',
-  },
+  flexDirection: 'row',
+  alignItems: 'center', 
+  paddingHorizontal: 20,
+  marginVertical: 20,
+  height: 95, 
+  top: -20,
+},
+
+avatar: {
+  width: 40,
+  height: 40,
+  borderRadius: 20,
+  backgroundColor: '#FF6B38',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginRight: 15, 
+   
+},
+avatarText:{
+  fontWeight: '800',
+   color:'#000000',
+
+},
+
+segmented: {
+  flexDirection: 'row',
+  alignItems: 'center',
+   
+},
+segment: {
+  paddingVertical: 8,
+  paddingHorizontal: 14,
+  borderRadius: 20,
+  backgroundColor: '#333333',
+  marginRight: 10, 
+},
   segmentActive: {
     backgroundColor: '#1db954',
   },
@@ -90,7 +85,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   segmentTextActive: {
-    color: '#040404ff',
+    color: '#040404',
   },
 });
 

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   image: {
-    width: '90%',
+    width: '93%',
     height: 150,
     borderRadius: 8,
     position :'relative',

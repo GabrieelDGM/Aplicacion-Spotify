@@ -36,7 +36,7 @@ Uso de librerías externas como Expo e iconos vectoriales
 
 Pruebas en emuladores móviles
 
-👨‍💻 Autor
+👨‍💻 Autor 👨‍💻
 Gabriel David Gelviz Monterrey.
 
 
